@@ -1,5 +1,3 @@
-'use strict';
-
 class Storage {
   #items = [];
   constructor(items) {
@@ -7,14 +5,14 @@ class Storage {
   }
 
   getItems() {
-    return this.#items
+    return this.#items;
   }
 
   addItem(newItem) {
-    this.#items.push(newItem)
+    this.#items.push(newItem);
   }
 
-   removeItem(itemToRemove) {
+  removeItem(itemToRemove) {
     const itemIndex = this.#items.indexOf(itemToRemove);
     if (itemIndex !== -1) {
       this.#items.splice(itemIndex, 1);
@@ -23,8 +21,8 @@ class Storage {
 }
 
 const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+console.log(storage.getItems());
 storage.addItem("Droid");
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+console.log(storage.getItems());
 storage.removeItem("Prolonger");
-console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+console.log(storage.getItems());
